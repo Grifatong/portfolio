@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- AOS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <!-- FONTS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&family=Poppins:wght@400;700&family=Roboto:wght@400;700&family=Sedgwick+Ave+Display&display=swap"
+      rel="stylesheet"
+    />
+    <!-- css link -->
+    <link rel="stylesheet" href="./assets/css/main.css" />
+    <!-- JS -->
+    <script
+      src="https://kit.fontawesome.com/6a9fcbbc3d.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="icon" href="./assets/images/png">
+    <title>Portfolio Miroslav Grifatong</title>
+     <!-- swiper link -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"
+    />
+  </head>
+  <body data-nav="true" data-page="home">
+     <!-- <div id="waveOnClick"></div> -->
+    <div class="star-container">
+      <!-- <div class="comet"></div> -->
+    </div>
+   
+    <div class="waves">
+      <div class="wave" id="wave1"></div>
+      <div class="wave" id="wave2"></div>
+      <div class="wave" id="wave3"></div>
+      <div class="wave" id="wave4"></div>
+    </div>
+    <nav>
+      <div class="ul-wrapper">
+        <ul>
+          <li class="homeStyle">
+            <p id="homeBtn" class="activated">home</p>
+          </li>
+          <li class="aboutStyle"><p id="aboutBtn">about</p></li>
+          <li class="workStyle"><p id="my_workBtn">my work</p></li>
+          <li class="contactStyle"><p id="contactBtn">contact</p></li>
+        </ul>
+      </div>
+    </nav>
+    <button id="nav-toggle" type="button">
+      <i class="open fa-solid fa-bars"></i>
+      <i class="close fa-solid fa-xmark"></i>
+    </button>
+    <div class="main page showPage" id="home">
+      <div class="pageId pageIdHome">
+        <span> <p>Home</p> </span>
+      </div>
+
+      <div class="blob-wrapper">
+        <div class="myImage">
+          <img src="./assets/images/favicon.png" alt="" />
+        </div>
+        <div class="glassCard">
+          <h4>Frontend web developer</h4>
+          <h2>Miroslav Grifatong</h2>
+          <p>
+            Hello let me introduce myself. I am a junior front end web developer
+            with the interest of making sites look as appealing as they can.
+            Ever since i started learning how to code i fell in love with it so
+            i decided to try and make it into a full time job. I am always
+            energetic and eager to learn new skills. You can read more about me
+            in my about page or contact me.
+          </p>
+          <div class="btn3 openContact">Contact me</div>
+        </div>
+      </div>
+
+      <footer>
+        <ul class="social-footer">
+          <li>
+            <a href="#"><ion-icon name="logo-facebook"></ion-icon></a>
+          </li>
+          <li>
+            <a href="https://www.linkedin.com/in/miroslav-g-0a165b250/" target="_blank"><ion-icon name="logo-linkedin"></ion-icon></a>
+          </li>
+          <li>
+            <a href="https://github.com/Grifatong?tab=repositories" target="_blank"><ion-icon name="logo-github"></ion-icon></a>
+          </li>
+        </ul>
+      </footer>
+    </div>
+    <div class="main page" id="about">
+      <div class="pageId pageIdAbout">
+        <span> <p>About</p> </span>
+      </div>
+      <div class="about-wrapper wrapper">
+        <div class="about-me">
+          <h3>About me</h3>
+          <p>
+            I am a junior front end web developer , i am looking for practical experience . I have good communication and problem solving skills. I have experience working with a large team of people. I am good at multitasking and have the ability to learn quickly , i would say that i am adaptive and patient as a person and always willing to learn more.
+          </p>
+          <h4>Some other skills</h4>
+          <p>
+            UX/UI Design , Figma , Adobe XD , Photoshop , Office Suit , and i have some knowledge of PHP and MySQL.
+          </p>
+        </div>
+        <div class="education-work-wrapper ">
+          <div class="education">
+            <h3 id="educationBtn">Education</h3></h3>
+            <ul id="educationContent" class="educationWork">
+              <li>
+                <h4>IT-opt School</h4>
+                <ul>
+                  <h5>2022 | Front-end web development</h5>
+                  <li>HTML</li>
+                  <li>CSS</li>
+                  <li>Javascript , Typescript</li>
+                  <li>SASS, Bootstrap 5</li>
+                  <li>React</li>
+                </ul>
+              </li>
+
+              <li>
+                <h4>University</h4>
+                <ul>
+                  <h5>
+                    2011 - present | University of mimind and geology (Belgrade)
+                  </h5>
+                  <li>Environmental protection Department</li>
+                </ul>
+              </li>
+              <li>
+                <h4>High school graduate</h4>
+                <ul>
+                  <h5>
+                    2007-2011 | Gimnasium "Dusan Vasiljev", Kikinda (Serbia)
+                  </h5>
+                  <li>Natural Sciences and Mathematics Department</li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+          <div class="work">
+            <h3 id="workBtn">Work</h3>
+            <ul id="workContent">
+              <li>
+                <h4>Help desk specialist</h4>
+                <ul>
+                  <h5>2020-2022 | NCR Corporation, Belgrade (Serbia)</h5>
+                  <li>IT support for Sainsbury stores in UK</li>
+                  <li>Resolving hardware and software issues</li>
+                  <li>Daily communication with customers</li>
+                  <li>Working with a team in a high pressure environment</li>
+                </ul>
+              </li>
+              <li>
+                <h4>Translator</h4>
+                <ul>
+                  <h5>2016 - present | Freelance</h5>
+                  <li>Freelance experience ,Belgrade</li>
+                  <li>Translating books (ENG - SRB)</li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <footer>
+        <ul class="social-footer">
+          <li>
+            <a href="#"><ion-icon name="logo-facebook"></ion-icon></a>
+          </li>
+          <li>
+            <a href="https://www.linkedin.com/in/miroslav-g-0a165b250/" target="_blank"><ion-icon name="logo-linkedin"></ion-icon></a>
+          </li>
+          <li>
+            <a href="https://github.com/Grifatong?tab=repositories" target="_blank"><ion-icon name="logo-github"></ion-icon></a>
+          </li>
+        </ul>
+      </footer>
+    </div>
+    <div class="main page" id="work">
+      <div class="pageId pageIdWork">
+        <span> <p>Work</p> </span>
+      </div>
+      <div class="work-wrapper wrapper">
+         <div class="my-work">
+          <h3>My work</h3>
+          <p>
+            Here you can find some examples of my recent work . Click to get more information.
+          </p>
+        </div>
+        <div class="work-cards">
+          <div class="swiper work-swiper">
+            <div class="swiper-wrapper">
+            </div>
+            <div class="swiper-button-prev swiperBtn"></div>
+            <div class="swiper-button-next swiperBtn"></div>
+          </div>
+        </div>
+      </div>
+      <footer>
+        <ul class="social-footer">
+          <li>
+            <a href="#"><ion-icon name="logo-facebook"></ion-icon></a>
+          </li>
+          <li>
+            <a href="https://www.linkedin.com/in/miroslav-g-0a165b250/" target="_blank"><ion-icon name="logo-linkedin"></ion-icon></a>
+          </li>
+          <li>
+            <a href="https://github.com/Grifatong?tab=repositories" target="_blank"><ion-icon name="logo-github"></ion-icon></a>
+          </li>
+        </ul>
+      </footer>
+    </div>
+    <div class="main page" id="contact">
+      <div class="pageId pageIdContact">
+        <span> <p>Contact</p> </span>
+      </div>
+      <div class="contact-wrapper wrapper">
+        <div class="contact-me">
+          <h3>contact me</h3>
+        <div class="myImage">
+          <img src="./assets/images/favicon.png" alt="" />
+        </div>
+        
+          <div class="contacts">
+            <p><ion-icon name="location-outline"></ion-icon>Belgrade ,Serbia</p>
+          <p><ion-icon name="mail-open-outline"></ion-icon>miroslav.grifatong@gmail.com</p>
+          <p><ion-icon name="call-outline"></ion-icon>+381/64-13-27-511</p>
+        </div>
+        <div class="social">
+          <p>You can find me on Linkedin and Github</p>
+          <a href="https://www.linkedin.com/in/miroslav-g-0a165b250/" target="_blank"><ion-icon name="logo-linkedin"></ion-icon></a>
+          <a href="https://github.com/Grifatong?tab=repositories" target="_blank"><ion-icon name="logo-github"></ion-icon></a>
+        </div>
+        </div>
+        
+      
+      </div>
+      <footer>
+        <ul class="social-footer">
+          <li>
+            <a href="#"><ion-icon name="logo-facebook"></ion-icon></a>
+          </li>
+          <li>
+            <a href="https://www.linkedin.com/in/miroslav-g-0a165b250/" target="_blank"><ion-icon name="logo-linkedin"></ion-icon></a>
+          </li>
+          <li>
+            <a href="https://github.com/Grifatong?tab=repositories" target="_blank"><ion-icon name="logo-github"></ion-icon></a>
+          </li>
+        </ul>
+      </footer>
+    </div>
+
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
+    ></script>
+    <!-- aos js -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <!-- swiper js -->
+
+    <script type="module">
+      import Swiper from 'https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.esm.browser.min.js'
+
+      const swiper = new Swiper(".work-swiper", {
+      loop: true,
+      spaceBetween: 20,
+      preventClicks:false,
+      preventClicksPropagation:false,
+      autoplay: {
+        delay: 8000,
+        disableOnInteraction: false,
+      },
+       navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      },
+      centeredSlides: true,
+      breakpoints: {
+        0: {
+          slidesPerView: 1,
+        },
+        700: {
+          slidesPerView: 1.5,
+        },
+        798: {
+          slidesPerView: 2,
+        },
+        992: {
+          slidesPerView: 3,
+        },
+        1200: {
+          slidesPerView: 4,
+        },
+      },
+    });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,303 @@
+body {
+  font-family: $font3;
+  position: relative;
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
+  background-color: $night-sky2;
+  background-image: linear-gradient(
+    to right top,
+    $night-sky4,
+    $night-sky2,
+    $aurora,
+    $night-sky2,
+    $night-sky4
+  );
+  .myImage {
+    width: 10rem;
+    height: 10rem;
+    img {
+      object-fit: cover;
+      width: 100%;
+      height: 100%;
+      border-radius: 48% 52% 68% 32% / 42% 28% 72% 58%;
+      filter: drop-shadow(5px 5px 10px rgb(0, 0, 0));
+    }
+  }
+  #waveOnClick {
+    visibility: hidden;
+    position: absolute;
+    background-color: transparent;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    z-index: 90;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .circle {
+    position: absolute;
+    background-color: transparent;
+    border: 10px solid #3586ff;
+    border-radius: 50%;
+    box-shadow: inset 5px 5px 10px rgba(255, 255, 255, 0.2);
+    box-shadow: inset 5px 5px 10px rgba(53, 134, 255, 0.5),
+      5px 5px 10px rgba(53, 134, 255, 0.5),
+      inset -5px -5px 10px rgba(255 255 255 / 1),
+      -5px -5px 10px rgba(255 255 255 / 1);
+    filter: blur(5px);
+    animation-name: ripple;
+    animation-duration: 2s;
+    animation-timing-function: cubic-bezier(0, 0.2, 0.8, 1);
+    animation-iteration-count: 2;
+  }
+  .circle:nth-child(2) {
+    animation-delay: -1s;
+  }
+  .circle:nth-child(3) {
+    animation-delay: -2s;
+  }
+  .circleThree {
+    border: 5px solid #3586ff;
+  }
+  .star-container {
+    width: 100%;
+    height: 45%;
+    padding: 5px;
+    position: relative;
+    .star {
+      background-color: $star;
+      width: 3px;
+      height: 3px;
+      border-radius: 50%;
+      position: absolute;
+      top: 0%;
+      left: 0%;
+    }
+    .comet {
+      position: absolute;
+      top: -200px;
+      width: 20px;
+      height: 150px;
+      clip-path: polygon(50% 0%, 40% 100%, 50% 100%);
+      background-color: $star;
+    }
+  }
+  .waves {
+    background: linear-gradient(
+      0deg,
+      rgba(0, 0, 0, 1) 0%,
+      rgba(53, 134, 255, 1) 100%
+    );
+    height: 50%;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    opacity: 1;
+    .wave {
+      position: absolute;
+      top: -50px;
+      width: 100%;
+      height: 50px;
+      background: url(/assets/images/wave.png);
+      background-size: 350px 51px;
+    }
+    #wave1 {
+      z-index: 5;
+      opacity: 1;
+      animation: animateWave 10s linear infinite;
+    }
+    #wave2 {
+      z-index: 4;
+      opacity: 0.5;
+      animation: animateWave 8s linear infinite;
+    }
+    #wave3 {
+      z-index: 3;
+      opacity: 0.3;
+      animation: animateWave 6s linear infinite;
+    }
+    #wave4 {
+      z-index: 2;
+      opacity: 0.7;
+      animation: animateWave 5s linear infinite;
+    }
+  }
+  .oneBubble {
+    position: absolute;
+    cursor: pointer;
+    caret-color: transparent;
+    left: calc(var(--x) * 1vw);
+    bottom: 0;
+    right: 0;
+    transform: translateX(-50%);
+    width: 2.5rem;
+    height: 2.5rem;
+    border-radius: 50%;
+    background-color: rgba(53, 134, 255, 0.2);
+    box-shadow: 0 20px 30px rgb(0, 0, 0, 0.5),
+      inset 0px 0px 10px 5px rgb(139, 139, 236);
+    z-index: 0;
+    animation: moveUp 10s linear 1, moveRight 5s ease-in-out infinite alternate;
+    transition: all 1s linear;
+    &:hover,
+    &:active {
+      transform: scale(1.5);
+    }
+  }
+  @keyframes cometAnimation1 {
+    0% {
+      top: -200px;
+      left: 20%;
+      opacity: 1;
+      transform: rotate(35deg);
+    }
+    100% {
+      left: 5%;
+      top: 70%;
+      height: 0;
+      opacity: 0;
+      transform: rotate(20deg);
+    }
+  }
+  @keyframes cometAnimation2 {
+    0% {
+      top: -300px;
+      left: 40%;
+      opacity: 1;
+      transform: rotate(-20deg);
+    }
+    100% {
+      left: 50%;
+      top: 90%;
+      opacity: 0;
+      height: 0px;
+      transform: rotate(-20deg);
+    }
+  }
+  @keyframes cometAnimation3 {
+    0% {
+      top: -200px;
+      left: 30%;
+      opacity: 1;
+      transform: rotate(30deg);
+    }
+    100% {
+      left: 10%;
+      top: 90%;
+      opacity: 0;
+      transform: rotate(30deg);
+      height: 0;
+    }
+  }
+  @keyframes cometAnimation4 {
+    0% {
+      left: 80%;
+      top: -200px;
+      opacity: 1;
+      transform: rotate(25deg);
+    }
+    100% {
+      left: 70%;
+      top: 90%;
+      opacity: 0;
+      transform: rotate(25deg);
+      height: 0;
+    }
+  }
+  @keyframes starLight {
+    0% {
+      filter: drop-shadow(0 0 2px white);
+    }
+    50% {
+      filter: drop-shadow(0 0 10px white);
+    }
+    100% {
+      filter: drop-shadow(0 0 2px white);
+    }
+  }
+  @keyframes animateWave {
+    0% {
+      background-position-x: 200px;
+    }
+    50% {
+      background-position-x: 0px;
+    }
+    100% {
+      background-position-x: 200px;
+    }
+  }
+  @keyframes animateWave-02 {
+    0% {
+      background-position-x: 0px;
+    }
+    100% {
+      background-position-x: 300px;
+    }
+  }
+  @keyframes moveUp {
+    0% {
+      scale: 1;
+      bottom: -5%;
+      opacity: 1;
+      right: 0;
+    }
+    100% {
+      scale: 1.9;
+      opacity: 0;
+      bottom: 100%;
+    }
+  }
+  @keyframes moveRight {
+    0% {
+      right: 30%;
+    }
+    50% {
+      left: 70%;
+    }
+    100% {
+      right: 30%;
+    }
+  }
+  @keyframes ripple {
+    0% {
+      width: 0;
+      height: 0;
+      opacity: 1;
+    }
+    100% {
+      width: 250px;
+      height: 250px;
+      opacity: 0;
+    }
+  }
+  @keyframes circle {
+    0% {
+      scale: 0;
+      visibility: visible;
+    }
+    100% {
+      scale: 1;
+      visibility: hidden;
+      opacity: 0;
+    }
+  }
+  .wrapper {
+    height: 85vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    width: 90%;
+    padding-top: 3rem;
+    margin: 0 auto;
+    padding-bottom: 1rem;
+    overflow-y: auto;
+  }
+  .contact-wrapper,
+  .work-wrapper {
+    justify-content: center;
+  }
+}

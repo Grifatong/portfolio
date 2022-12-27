@@ -1,0 +1,72 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+html {
+  height: 100vh;
+  overflow: hidden;
+}
+a {
+  text-decoration: none;
+}
+h1,
+h2,
+h3,
+h4 {
+  letter-spacing: 0.1rem;
+  text-transform: capitalize;
+  line-height: 1.25;
+  margin-bottom: 0.75rem;
+  font-family: $font3;
+}
+h1 {
+  font-size: 3rem;
+}
+h2 {
+  font-size: 2rem;
+}
+h3 {
+  font-size: 1.25rem;
+}
+h4 {
+  font-size: 0.875rem;
+}
+p {
+  color: $color6;
+}
+
+.homeStyle:has(> p.activated) {
+  &::before {
+    background-color: $palete2-1;
+  }
+  p {
+    color: $palete2-1;
+  }
+}
+.aboutStyle:has(> p.activated) {
+  &::before {
+    background-color: $palete2-2;
+  }
+  p {
+    color: $palete2-2;
+  }
+}
+.workStyle:has(> p.activated) {
+  &::before {
+    background-color: $palete2-3;
+  }
+  p {
+    color: $palete2-3;
+  }
+}
+.contactStyle:has(> p.activated) {
+  &::before {
+    background-color: $palete2-4;
+  }
+  p {
+    color: $palete2-4;
+  }
+}

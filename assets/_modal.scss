@@ -1,0 +1,110 @@
+.modalBackground {
+  position: absolute;
+  z-index: 999;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.8);
+  backdrop-filter: blur(2px);
+  padding-top: 20vh;
+  transition: all 0.5s ease-in-out;
+  .modalMain {
+    position: relative;
+    min-width: 300px;
+    width: 33vw;
+    max-width: 400px;
+    height: 400px;
+    padding: 2rem 3rem;
+    border: 1px solid white;
+    background-color: hsl(35, 69%, 40%);
+    box-shadow: 3px 4px 4px rgba(255, 255, 255, 0.3);
+    border-radius: 2rem;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    color: white;
+    animation: showModal 0.7s;
+    animation-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    .modalClose {
+      position: absolute;
+      right: 20px;
+      top: 20px;
+      ion-icon {
+        height: 2rem;
+        width: 2rem;
+        transition: all 0.3s ease-in-out;
+        &:hover,
+        &:active {
+          color: red;
+          cursor: pointer;
+        }
+      }
+    }
+    @keyframes showModal {
+      0% {
+        transform: translateX(-200%);
+      }
+      100% {
+        transform: translateX(0%);
+      }
+    }
+    @keyframes hideModal {
+      0% {
+        transform: translateX(0%);
+      }
+      100% {
+        transform: translateX(-200%);
+      }
+    }
+    h3 {
+      font-size: 2rem;
+    }
+    p {
+      color: white;
+      font-size: 1rem;
+      margin-top: 1rem;
+      margin-bottom: 1rem;
+      background-color: hsl(35, 69%, 20%);
+      padding: 1rem;
+      border-radius: 1rem;
+    }
+    .modalFooter {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      width: 100%;
+      min-width: 330px;
+    }
+    .modalDownloadBtn {
+      height: 2rem;
+      padding: 0.3rem 2rem;
+      text-transform: capitalize;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-radius: 1rem;
+      border: 1px solid white;
+      transition: all 0.3s ease-in-out;
+      font-weight: 600;
+      &:hover,
+      &:active {
+        cursor: pointer;
+        background-color: rgb(164, 205, 241);
+        background-color: $color-2;
+        border-color: rgb(255, 255, 255);
+      }
+      a {
+        color: #3586ff;
+        display: flex;
+        align-items: center;
+      }
+      ion-icon {
+        margin-left: 1rem;
+        font-size: 1.5rem;
+      }
+    }
+  }
+}

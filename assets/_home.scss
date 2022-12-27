@@ -1,0 +1,185 @@
+#home {
+  .blob-wrapper {
+    position: relative;
+    margin: auto;
+    margin-top: 10%;
+    // transform: translateY(-10%);
+    padding: 1rem;
+    border: 2px solid rgba(255, 0, 0, 0);
+    width: 50vw;
+    max-width: 800px;
+    min-width: 320px;
+    max-height: 75vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: $palete2-1;
+    background-image: linear-gradient(
+      45deg,
+      hsl(219deg 100% 75%) 0%,
+      hsl(201deg 100% 61%) 11%,
+      hsl(194deg 100% 50%) 22%,
+      hsl(192deg 100% 50%) 33%,
+      hsl(186deg 100% 46%) 44%,
+      hsl(177deg 100% 42%) 56%,
+      hsl(166deg 100% 43%) 67%,
+      hsl(155deg 100% 43%) 78%,
+      hsl(112deg 65% 60%) 89%,
+      hsl(78deg 69% 50%) 100%
+    );
+    border-radius: 48% 52% 68% 32% / 42% 28% 72% 58%;
+    animation: moveBlob 30s 0s linear infinite alternate;
+  }
+  @keyframes moveBlob {
+    0% {
+      border-radius: 48% 52% 68% 32% / 42% 28% 72% 58%;
+    }
+    5% {
+      border-radius: 48% 52% 41% 59% / 66% 37% 63% 34%;
+    }
+    10% {
+      border-radius: 69% 31% 71% 29% / 67% 31% 69% 33%;
+    }
+    15% {
+      border-radius: 60% 40% 71% 29% / 63% 65% 35% 37%;
+    }
+    20% {
+      border-radius: 61% 39% 51% 49% / 57% 58% 42% 43%;
+    }
+    25% {
+      border-radius: 66% 34% 25% 75% / 47% 30% 70% 53%;
+    }
+    30% {
+      border-radius: 32% 68% 38% 62% / 65% 60% 40% 35%;
+    }
+    35% {
+      border-radius: 63% 37% 41% 59% / 35% 38% 62% 65%;
+    }
+    40% {
+      border-radius: 57% 43% 49% 51% / 55% 71% 29% 45%;
+    }
+    45% {
+      border-radius: 47% 53% 34% 66% / 65% 36% 64% 35%;
+    }
+    50% {
+      border-radius: 44% 56% 32% 68% / 69% 26% 74% 31%;
+    }
+    55% {
+      border-radius: 28% 72% 37% 63% / 71% 44% 56% 29%;
+    }
+    60% {
+      border-radius: 38% 62% 35% 65% / 74% 53% 47% 26%;
+    }
+    65% {
+      border-radius: 73% 27% 46% 54% / 54% 47% 53% 46%;
+    }
+    70% {
+      border-radius: 75% 25% 47% 53% / 49% 53% 47% 51%;
+    }
+    75% {
+      border-radius: 62% 38% 43% 57% / 55% 60% 40% 45%;
+    }
+    80% {
+      border-radius: 41% 59% 65% 35% / 73% 50% 50% 27%;
+    }
+    85% {
+      border-radius: 55% 45% 57% 43% / 73% 61% 39% 27%;
+    }
+    90% {
+      border-radius: 74% 26% 33% 67% / 40% 65% 35% 60%;
+    }
+    95% {
+      border-radius: 58% 42% 57% 43% / 53% 45% 55% 47%;
+    }
+    100% {
+      border-radius: 48% 52% 68% 32% / 42% 28% 72% 58%;
+    }
+  }
+  .glassCard {
+    background: rgba(255, 255, 255, 0.15);
+    background: linear-gradient(to right, #ffffff99, #00b7ff1a);
+    box-shadow: 0 8px 30px 0 rgba(31, 38, 135, 0.4);
+    backdrop-filter: blur(4px);
+    border-radius: 1rem;
+    border: 2px solid rgba(255, 255, 255, 0.2);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 1.5rem;
+    margin-top: 1rem;
+    max-width: 600px;
+    min-width: 320px;
+    h4 {
+      color: $color1;
+      font-size: 1.2rem;
+    }
+    h2 {
+      font-size: 3rem;
+      white-space: none;
+    }
+    p {
+      text-align: justify;
+      padding: 1rem;
+      font-size: 1.1rem;
+      word-spacing: 0.1rem;
+      background-color: rgba(255, 255, 255, 0.5);
+      border-radius: inherit;
+    }
+    .btn3 {
+      font-size: 1rem;
+      font-family: $font3;
+      display: inline-block;
+      color: #000;
+      border: 2px solid rgba(255, 255, 255, 0.2);
+      padding: 0.5rem 1.5rem;
+      margin-top: 2rem;
+      font-size: 25px;
+      font-weight: bold;
+      position: relative;
+      transition: all 0.3s 0.5s ease-in-out;
+      z-index: 2;
+      border-radius: 2rem;
+      overflow: hidden;
+    }
+    .btn3::after {
+      position: absolute;
+      content: "";
+      background-color: $color;
+      height: 4px;
+      width: 0%;
+      border-radius: 3px;
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      transition: all 0.3s ease-in-out;
+    }
+    .btn3:hover:after {
+      width: 100%;
+    }
+    .btn3::before {
+      position: absolute;
+      content: "";
+      background-color: $color;
+      height: 4px;
+      width: 100%;
+      opacity: 0;
+      border-radius: 3px;
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      transition: 0.5s 0.3s all ease-in-out;
+      z-index: -1;
+    }
+    .btn3:hover:before {
+      opacity: 1;
+      height: 100%;
+    }
+    .btn3:hover {
+      color: #fff;
+      box-shadow: none;
+      cursor: pointer;
+    }
+  }
+}

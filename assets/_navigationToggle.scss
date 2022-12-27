@@ -1,0 +1,91 @@
+#nav-toggle {
+  border: none;
+  border-radius: 50%;
+  position: fixed;
+  left: 20vw;
+  top: 15vh;
+  transform: translateX(-50%);
+  width: 5rem;
+  height: 5rem;
+  background-color: $color;
+  box-shadow: inset 0px 0px 10px 5px rgb(139, 139, 236);
+  z-index: 999;
+  transition: all 0.3s ease;
+  overflow: hidden;
+  animation: heartbeat 1.5s ease-in-out 1 both;
+  @keyframes heartbeat {
+    from {
+      scale: 1;
+      transform-origin: center center;
+      animation-timing-function: ease-out;
+    }
+    10% {
+      scale: 0.91;
+      animation-timing-function: ease-in;
+    }
+    17% {
+      scale: 0.98;
+      animation-timing-function: ease-out;
+    }
+    33% {
+      scale: 0.87;
+      animation-timing-function: ease-in;
+    }
+    45% {
+      scale: 1;
+      animation-timing-function: ease-out;
+    }
+  }
+  i {
+    position: absolute;
+    left: 50%;
+    top: -10%;
+    transform: translate(-50%, -50%) scale(0.5);
+    color: rgb(246, 231, 224);
+    font-size: 2rem;
+    opacity: 1;
+    display: block;
+    transition: all 0.3s ease-in-out;
+  }
+  & .close {
+    top: 130%;
+  }
+  &:hover {
+    cursor: pointer;
+    transform: translateX(-50%) scale(1.1);
+    filter: drop-shadow(8px 1px 3px $color1);
+  }
+  &:active {
+    transform: translateX(-50%) scale(0.9);
+  }
+  &::after {
+    content: "";
+    position: absolute;
+    background-color: $color1;
+    opacity: 0.3;
+    top: 0;
+    right: 0;
+    width: 50%;
+    height: 100%;
+    transition: all 0.5s ease;
+  }
+  &:hover::after {
+    width: 0;
+  }
+  body:not([data-nav="true"]) > &::after {
+    width: 100%;
+  }
+  body:not([data-nav="true"]) > & .open {
+    opacity: 1;
+    top: 50%;
+    transform: translate(-50%, -50%) scale(1);
+  }
+  body:not([data-nav="true"]) > &:hover::after {
+    width: 0;
+  }
+  body[data-nav="true"] > & .close {
+    opacity: 1;
+    top: 50%;
+    transform: translate(-50%, -50%) scale(1);
+  }
+}
